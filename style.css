@@ -16,6 +16,10 @@ body {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 header {
   background-color: white;
   height: 60px;
@@ -26,7 +30,6 @@ header {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
 }
 
@@ -104,7 +107,6 @@ header a:hover {
 
 .aboutme-content ul {
   display: flex;
-  list-style: none;
   padding-inline-start: 0;
   margin-block-end: 0;
   margin-top: 40px;
@@ -201,9 +203,65 @@ td.skill-icon {
 
 /* 実績 */
 .works {
-  background-color: lime;
-  height: 350px;
+  background-color: white;
+  padding: 70px 5%;
 }
+
+.works-title {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.works-title h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.works-contents img{
+  width: 100%;
+  border-radius:8px 8px 0 0;
+}
+
+.works-contents ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 0;
+}
+
+.works-contents li {
+  width: 32%;
+  height: auto;
+  border: solid 2px #dcdcdc;
+  border-radius: 10px;
+}
+
+.works-content{
+  padding: 10px 20px;
+}
+
+.works-content p {
+  font-size: 14px;
+}
+
+.modal-link {
+  border-bottom: dashed 1px black;
+  transition: color 0.3s ease 0s, border-bottom-color 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.modal-link:hover {
+  color: pink;
+  border-bottom-color: pink;
+}
+
+.works-content .content-number{
+  font-size: 22px;
+  text-align: right;
+}
+
 
 /* 経歴 */
 .timeline {
