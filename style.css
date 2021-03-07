@@ -1,0 +1,223 @@
+html {
+  font-family: "Arial", "メイリオ";
+}
+
+html h2 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+html h3 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: white;
+  height: 60px;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  margin-left: 30px;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  color: pink;
+}
+
+/* fv */
+.firstview {
+  background-image: url(img/1stview.png);
+  background-size: cover;
+  width: 100%;
+  height: 664px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.firstview::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.firstview-content {
+  margin: auto;
+  z-index: 3;
+}
+
+.firstview h2 span {
+  font-size: 60px;
+}
+
+.firstview-content h2 {
+  color: white;
+}
+
+/* 自己紹介 */
+.aboutme {
+  display: flex;
+  padding: 70px 5%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.aboutme-img img {
+  width: 536px;
+  height: 333px;
+  border-radius: 10px;
+}
+
+.aboutme-content {
+  height: 333px;
+  width: 49%;
+}
+
+.aboutme-content h2 {
+  margin-block-start: 0;
+}
+
+.aboutme-content ul {
+  display: flex;
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  margin-top: 40px;
+}
+
+.aboutme-content li {
+  margin-right: 20px;
+}
+
+.icon {
+  transition: fill 0.3s;
+}
+
+.icon:hover {
+  fill: pink;
+}
+
+/* スキル */
+.skill {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
+  margin: 0 auto;
+  padding: 70px 5%;
+  margin: 0 auto;
+}
+
+.skill-title {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.common-subtitle h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.skill-content table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  border-spacing: 0;
+}
+
+.skill-content tr {
+  border-bottom: solid 1px #eee;
+}
+
+.skill-content tr:hover {
+  background-color: rgba(182, 240, 255, 0.616);
+}
+
+.skill-content td,
+.skill-content th {
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}
+
+td.skill-icon {
+  background-size: 25px;
+  background-position: left 70px center;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+}
+
+.html {
+  background-image: url(img/html-5.png);
+}
+
+.css {
+  background-image: url(img/css-3.png);
+}
+
+.javascript {
+  background-image: url(img/javascript.png);
+}
+
+.vue {
+  background-image: url(img/vue.png);
+}
+
+.firebase {
+  background-image: url(img/firebase.png);
+}
+
+.nuxt {
+  background-image: url(img/nuxt-icon.png);
+}
+
+.node {
+  background-image: url(img/nodejs.png);
+}
+
+/* 実績 */
+.works {
+  background-color: lime;
+  height: 350px;
+}
+
+/* 経歴 */
+.timeline {
+  background-color: skyblue;
+  height: 400px;
+}
+
+/* フォーム */
+.contact {
+  background-color: gray;
+  height: 300px;
+}
+
+footer {
+  background-color: green;
+  height: 500px;
+}
