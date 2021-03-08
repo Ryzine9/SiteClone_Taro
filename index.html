@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>ポートフォリオサイト</title>
+
+    <!-- FontAwesome -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+
+    <!-- jQueryの導入 -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+      jQuery(function(){
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+          // スクロールの速度
+          let speed = 400; // ミリ秒で記述
+          let headerHight = 60;
+          let href= $(this).attr("href");
+          let target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top-headerHight;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+        var pagetop = $('#page_top');  
+        pagetop.click(function() {
+          // スクロールの速度
+          let speed = 400; // ミリ秒で記述
+          $('body,html').animate({scrollTop:0}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+      
+
   </head>
   <body>
     <!-- ヘッダーここから -->
@@ -16,7 +47,7 @@
       <nav>
         <ul>
           <li><a href="#about">自己紹介</a></li>
-          <li><a href="#about">制作実績</a></li>
+          <li><a href="#works">制作実績</a></li>
           <li><a href="#skill">技術・スキル</a></li>
           <li><a href="#about">経歴</a></li>
           <li><a href="#about">お問い合わせ</a></li>
@@ -124,7 +155,7 @@
 
     <!-- スキルここから -->
     <div class="skill" id="skill">
-      <div class="skill-title">
+      <div class="common-title">
         <div class="common-subtitle">
           <h2>スキル・経験</h2>
         </div>
@@ -185,47 +216,55 @@
     <!-- スキルここまで -->
 
     <!-- 実績ここから -->
-    <div class="works">
-      <div class="works-title">
+    <div class="works" id="works">
+      <div class="common-title">
         <h2>制作実績</h2>
       </div>
-      <div class="works-contents">
-        <ul>
-          <li>
-            <img src="img/1.jpg" alt="制作物1イメージ">
-            <div class="works-content">
-              <h3>制作物1</h3>
-              <p><a href="#">https://works1</a></p>
-              <p>HTML/CSS</p>
-              <p>HTML/CSSで自己紹介サイトを作成しました。CSSでモーダルウィンドウを実装しました。</p>
-              <p><a class="modal-link">詳細を見る</a></p>
-              <p class="content-number">#01</p>
-            </div>
-          </li>
-          <li>
-            <img src="img/2.jpg" alt="制作物2イメージ">
-            <div class="works-content">
-              <h3>制作物2</h3>
-              <p><a href="#">https://works2</a></p>
-              <p>JS</p>
-              <p>JavaScriptでパズルゲームを作成しました。こういったところを工夫しました。</p>
-              <p><a class="modal-link">詳細を見る</a></p>
-              <p class="content-number">#02</p>
-            </div>
-          </li>
-          <li>
-            <img src="img/3.jpg" alt="制作物3イメージ">
-            <div class="works-content">
-              <h3>制作物1</h3>
-              <p><a href="#">https://works3</a></p>
-              <p>Nuxt/Vuetifly/Firebase</p>
-              <p>Nuxt+FirebaseでTODOアプリを作成しました。UIフレームワークはvuetifyを使用しています。</p>
-              <p><a class="modal-link">詳細を見る</a></p>
-              <p class="content-number">#03</p>
-            </div>
-          </li>
-        </ul>
-      </div>
+
+      <ul>
+        <li>
+          <img src="/img/1.jpg" alt="">
+          <div class="content">
+            <h3>制作物1
+              <br>
+              <span><a href="">https://works1</a></span>
+            </h3>
+            <p>HTML / CSS</p>
+            <p>HTML / CSSで自己紹介サイトの制作をしました。CSSでモーダルウィンドウ を実装しました。</p>
+            <p><a class="mordallink">詳細を見る</a></p>
+            <p class="card-number">#01</p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/img/2.jpg" alt="">
+          <div class="content">
+            <h3>制作物2
+              <br>
+              <span><a href="">https://works2</a></span>
+            </h3>
+            <p>JS</p>
+            <p>JavaScriptでパズルゲームを作成しました。こういったところを工夫しました。</p>
+            <p><a class="mordallink">詳細を見る</a></p>
+            <p class="card-number">#02</p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/img/3.jpg" alt="">
+          <div class="content">
+            <h3>制作物3
+              <br>
+              <span><a href="">https://works3</a></span>
+            </h3>
+            <p>Nuxt / Vuetify / Firebase</p>
+            <p>Nuxt+FirebaseでTODOアプリを作成しました。UIフレームワークはvuetifyを使用しています。</p>
+            <p><a class="mordallink">詳細を見る</a></p>
+            <p class="card-number">#03</p>
+          </div>
+        </li>
+      </ul>
+
     </div>
     <!-- 実績ここまで -->
 
@@ -236,6 +275,8 @@
     <!-- フォームここから -->
     <div class="contact"></div>
     <!-- フォームここまで -->
+
+    <a class="fa" id="page_top"><i class="fas fa-arrow-alt-circle-up"></i></a>
 
     <!-- フッターここから -->
     <footer>
