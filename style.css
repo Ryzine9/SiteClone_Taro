@@ -25,6 +25,7 @@ ul {
   list-style: none;
 }
 
+/* #region ヘッダー */
 header {
   background-color: white;
   width: 100%;
@@ -55,6 +56,9 @@ header a:hover {
   color: pink;
 }
 
+/* #endregion */
+
+/* #region 先頭へ戻るボタン */
 .fas{
   color: rgba(0, 0, 0, 0.5);
   font-size: 40px;
@@ -76,8 +80,9 @@ header a:hover {
   margin: 0;
   padding: 0;
 }
+/* #endregion */
 
-/* fv */
+/* #region fv */
 .firstview {
   background-image: url(img/1stview.png);
   background-size: cover;
@@ -112,7 +117,9 @@ header a:hover {
   color: white;
 }
 
-/* 自己紹介 */
+ /* #endregion */
+
+/* #region 自己紹介 */
 .aboutme {
   display: flex;
   padding: 70px 5%;
@@ -155,7 +162,9 @@ header a:hover {
   fill: pink;
 }
 
-/* スキル */
+/* #endregion */
+
+/* #region スキル */
 .skill {
   margin: 0 auto;
   padding: 70px 5%;
@@ -223,7 +232,9 @@ td.skill-icon {
   background-image: url(img/nodejs.png);
 }
 
-/* 実績 */
+/* #endregion */
+
+/* #region 実績 */
 .works {
   background-color: white;
   padding: 70px 5%;
@@ -288,19 +299,25 @@ td.skill-icon {
   font-size: 22px;
 }
 
-/* 経歴 */
+/* #endregion */
+
+/* #region 経歴 */
 .timeline {
   background-color: skyblue;
   height: 400px;
 }
+/* #endregion */
 
-/* フォーム */
+/* #region フォーム */
 .contact {
   background-color: gray;
   height: 300px;
 }
+/* #endregion */
 
+/* #region フッター */
 footer {
   background-color: green;
   height: 500px;
 }
+/* #endregion */
