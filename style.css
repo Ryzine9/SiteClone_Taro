@@ -67,7 +67,7 @@ header a:hover {
 /* #region 先頭へ戻るボタン */
 .fas {
   color: rgba(0, 0, 0, 0.5);
-  font-size: 40px;
+  font-size: 60px;
   transition: all 0.3s ease;
 }
 
@@ -479,7 +479,18 @@ footer {
   padding: 20px 0;
 }
 
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
 footer ul li {
   fill: white;
+  margin-right: 20px;
+}
+
+footer p {
+  text-align: center;
+  color: white;
 }
 /* #endregion */
