@@ -516,6 +516,17 @@ footer p {
     font-size: 30px;
   }
 
+  /* #region スキル */
+  .skill-content td,
+  .skill-content th {
+    width: 20%;
+  }
+  td.skill-icon {
+    background-position: left 0px center;
+    padding-left: 30px;
+  }
+  /* #endregion */
+
   /* #region フォーム */
   .contact {
     width: 50%;
@@ -591,12 +602,7 @@ footer p {
   /* #region スキル */
   .skill-content td,
   .skill-content th {
-    width: 20%;
     font-size: 12px;
-  }
-  td.skill-icon {
-    background-position: left 0px center;
-    padding-left: 30px;
   }
   /* #endregion */
 
