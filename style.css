@@ -366,6 +366,7 @@ td.skill-icon {
 .content-box p {
   font-size: 16px;
   line-height: 1.65;
+  text-align: left;
 }
 
 .yoko-line {
@@ -511,7 +512,7 @@ footer p {
     width: auto;
   }
 
-  .common-subtitle h2{
+  .common-subtitle h2 {
     font-size: 30px;
   }
 
@@ -563,6 +564,18 @@ footer p {
     display: none;
   }
 
+  /* #region スキル */
+  .skill-content td,
+  .skill-content th {
+    width: 20%;
+    font-size: 12px;
+  }
+  td.skill-icon {
+    background-position: left 0px center;
+    padding-left: 30px;
+  }
+  /* #endregion */
+
   /* #region 実績 */
   .works ul {
     justify-content: center;
@@ -572,11 +585,17 @@ footer p {
     width: 100%;
     box-sizing: border-box;
   }
+  .works ul li .content p {
+    font-size: 12px;
+  }
 
   /* #endregion */
 
   /* #region 経歴 */
-  .content-box h5{
+  .content-box h5 {
+    font-size: 20px;
+  }
+  .content-box p {
     font-size: 12px;
   }
   /* #endregion */
