@@ -582,6 +582,12 @@ footer p {
     display: none;
   }
 
+  /* #region fv */
+  .firstview-content h2 {
+    padding-left: 10px;
+  }
+  /* #endregion */
+
   /* #region スキル */
   .skill-content td,
   .skill-content th {
