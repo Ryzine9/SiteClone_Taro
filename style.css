@@ -39,11 +39,12 @@ header {
   opacity: 0.8;
 }
 
-nav ul {
+header nav ul {
   display: flex;
+  padding: 0;
 }
 
-nav ul li a {
+header nav ul li a {
   margin-left: 30px;
 }
 
@@ -55,10 +56,49 @@ header a {
 header a:hover {
   color: pink;
 }
-
-header .hamburger-menu {
+/* #region ハンバーガーメニュー */
+.hamburger-menu {
   display: none;
 }
+.menu-content {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 100%;
+  width: 70%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 7;
+  transition: all 0.5s;
+}
+#menu-btn-check:checked ~ .menu-content {
+  left: 30%;
+}
+.hamburger-menu nav ul {
+  margin-top: 60px;
+  display: block;
+  margin-left: 0;
+}
+.hamburger-menu nav ul li {
+  height: 44px;
+  margin-left: 5px;
+  border-bottom: solid 1px #ffffff;
+}
+.hamburger-menu nav ul li:nth-child(1) {
+  border-top: solid 1px #ffffff;
+}
+.hamburger-menu nav ul li a {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 10px 0;
+  padding-left: 30px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.4);
+}
+/* #endregion ハンバーガーメニューここまで */
 
 /* #endregion */
 
@@ -80,7 +120,7 @@ header .hamburger-menu {
 }
 
 .fa {
-  z-index: 10;
+  z-index: 5;
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -137,12 +177,8 @@ header .hamburger-menu {
 }
 
 .aboutme-img img {
-  /* width: 536px;
-  height: 333px; */
-
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+  width: 536px;
+  height: 333px;
 
   border-radius: 10px;
 }
@@ -501,6 +537,12 @@ footer p {
 
 /* #region レスポンシブ */
 @media (max-width: 1024px) {
+  header nav ul li a {
+    text-decoration: none;
+    color: black;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
   .aboutme {
     flex-direction: column;
     margin-bottom: 0;
@@ -508,10 +550,14 @@ footer p {
   .aboutme-img {
     margin-bottom: 30px;
   }
+  .aboutme-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
   .aboutme-content {
     width: auto;
   }
-
   .common-subtitle h2 {
     font-size: 30px;
   }
@@ -541,12 +587,16 @@ footer p {
     justify-content: space-between;
   }
   .menu-btn {
-    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
     height: 60px;
     width: 60px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3584bb;
+    background-color: gray;
+    z-index: 8;
   }
   .menu-btn span,
   .menu-btn span:before,
@@ -565,7 +615,6 @@ footer p {
   .menu-btn span:after {
     top: 8px;
   }
-
   #menu-btn-check:checked ~ .menu-btn span {
     background-color: rgba(
       255,
@@ -582,7 +631,6 @@ footer p {
     top: 0;
     transform: rotate(-45deg);
   }
-
   header .hamburger-menu {
     display: block;
   }
