@@ -473,6 +473,7 @@ td.skill-icon {
   background-color: #e9cdc1;
   border-radius: 5px;
   margin-bottom: 40px;
+  font-size: 16px;
 }
 
 .contact textarea {
@@ -482,6 +483,7 @@ td.skill-icon {
   background-color: #e9cdc1;
   border-radius: 5px;
   margin-bottom: 20px;
+  font-size: 16px;
 }
 
 .checkbox input {
