@@ -132,10 +132,10 @@ header a:hover {
 
 /* #region fv */
 .firstview {
-  background-image: url(img/1stview.png);
+  background-image: url(./img/fv.jpg);
   background-size: cover;
   width: 100%;
-  height: 664px;
+  height: 100vh;
   display: flex;
   position: relative;
   z-index: 1;
@@ -155,6 +155,22 @@ header a:hover {
 .firstview-content {
   margin: auto;
   z-index: 3;
+  opacity: 0;
+  animation: fadein;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .firstview h2 span {
@@ -174,6 +190,7 @@ header a:hover {
   justify-content: space-between;
   align-items: center;
   background-color: white;
+  z-index: 1;
 }
 
 .aboutme-img img {
@@ -185,7 +202,7 @@ header a:hover {
 
 .aboutme-content {
   height: auto;
-  width: 49%;
+  width: 55%;
   margin-left: 20px;
   margin-bottom: auto;
 }
@@ -582,7 +599,7 @@ footer p {
   /* #endregion */
 }
 
-@media (min-width: 0px) and (max-width: 599px) {
+@media (min-width: 0px) and (max-width: 700px) {
   header {
     padding-right: 0;
     width: 95%;
@@ -687,4 +704,15 @@ footer p {
   /* #endregion */
 
   /* #endregion */
+}
+
+.hide{
+  opacity: 0;
+  transform: translate(0, 50px);
+}
+
+.hide.show{
+  opacity: 1;
+  transform: translate(0,0);
+  transition: all 1s ease;
 }
